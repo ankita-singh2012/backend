@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    select a fruit: <select id="fruit" onclick="selected()">
+        <option value="apple">Apple</option>
+        <option value="orange">Orange</option>
+        
+    </select>
+    <p id="p1"></p>
+    Select the checkbox:
+    <input type="checkbox" id="ck1" onclick="check()">
+    <p id="p2"></p>
+    <h1 style="color: rgb(27, 34, 80);">Key Event</h1>
+    <input type="text" id="text1" onkeydown="keydown()" onkeyup="keyup()">
+    <h2>Adder</h2>
+    <input type="number" id="num1" oninput="change()"> + <input type="number" id="num2" oninput="change()"> = <input type="text" id="result">
+    <script>
+        function selected(){
+         var x = document.getElementById("fruit");
+         var y = x.options[x.selectedIndex].text;
+         document.getElementById("p1").innerHTML = `selected fruit is ${y}`;
+        }
+        function check(){
+          var checked = document.getElementById("ck1").checked;
+          var text = document.getElementById("p2");
+          if(checked){
+              text.innerHTML = `on`;
+          }
+          else{
+              text.innerHTML=`off`;
+          }
+        }
+        function keydown(){
+            document.getElementById("text1").style.backgroundColor="red";
+        }
+
+        function keyup(){
+            document.getElementById("text1").style.backgroundColor="green";
+        }
+        function change(){
+            console.log("inside change");
+            var x =document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var res = parseInt(x) + parseInt(y);
+            console.log(res);
+          var p =  document.getElementById("result");
+            p.value=`${res}`;
+        }
+    </script>
+</body>
+</html>
