@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint" content="width= device-width,initial-scale=1.0">
+        <title>Document</title>
+
+    </head>
+    <body onmousemove="mousemove()"</body>
+        <div>
+            <p id="mousecoord"
+            </p>
+        </div>
+        <form>
+            Name<input type="text" id="name" onfocus="focus()" onblur="blur()">
+
+        </form>
+        <h3 id="hd1" onclick="singleclick()" ondblick="dbclick()">color change </h3>
+        <script>
+            var name=document.getElementById("name");
+            name.addEventListener("focus",focus);
+            name.addEventListener("blur",blur);
+            function focus(){
+            var x=document.getElementById("name");
+            console.log(JSON.stringify(X));
+            x.style.backgroundColor='red'
+            }
+            function blur(){
+                document.getElementById("name").style.backgroundColor="blue";
+
+            }
+            function dbclick(){
+                document.getElementById('hd1').style.color="blue";
+
+            }
+            function mousemove(){
+                var e=window.event;
+                var x=e.clientX;
+                var y=e.clientY;
+                document.getElementById("mousecoord").innerHTML=`x coordinate: ${x} y coordinate:${y}`;
+            }
+
+        
+
+        </script>
+       
+    </body>
+        
+</html>
