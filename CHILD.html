@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+div{
+    background-color: aquamarine;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    margin:10px;}
+
+.c2{
+
+    opacity: 50%;
+    background-color: rgb(17, 0, 255);
+    transition: opacity 0.5s;
+    transition: background-color 1.0s;
+}
+
+.c2:hover{
+    opacity: 100%;
+    background-color: red;
+    transition: opacity 0.5s;
+    transition : background-color ease-in 1.0s;
+}
+.c1:hover{
+    font-size: 25px;
+    transition: font-size ease-in 0.5s;
+    
+}
+tr:nth-child(even) {
+            background-color: pink;
+        }
+p:not(.p1){
+    color: orange;
+
+}
+.b1:not(.b1:disabled){
+    border-width: 2px;
+    border-color: green;
+    background-color: orange;
+}
+
+</style>
+<body>
+    <div class="c2">
+        <center>
+                <h2>Animate</h2>
+    <button class="c1">Click to animate</button>
+   </center>
+</div>
+<div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>age</th>
+        </tr>
+          
+        <tr>
+            <td>Ankita</td>
+            <td>India</td>
+            <td>23</td>
+        </tr>
+          
+        <tr>
+            <td>Nikita</td>
+            <td>india</td>
+            <td>30</td>
+        </tr>
+          
+        <tr>
+            <td>golu</td>
+            <td>Brazil</td>
+            <td>30</td>
+        </tr>
+          
+        <tr>
+            <td>Kartik</td>
+            <td>India</td>
+            <td>20</td>
+        </tr>
+          
+        <tr>
+            <td>anmol</td>
+            <td>India</td>
+            <td>20</td>
+        </tr>
+    </table>
+    <button class="b1" disabled=true>Click Here</button>
+    <button class="b1" >Click Here</button>
+</div>
+<p class="p1">This is para 1 with class p1.</p>
+<p>
+    This is para 2.
+</p>
+<p>This is para3.</p>
+
+</body>
+</html>
