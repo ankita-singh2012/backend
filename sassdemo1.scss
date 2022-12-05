@@ -1,0 +1,8 @@
+$favColor:red;
+$favColor2:green;
+$size:10px;
+
+h1{
+    color: if(2+2=4,$favColor,$favColor2);
+    font-size: $size;
+}

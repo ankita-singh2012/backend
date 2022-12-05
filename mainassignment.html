@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+      
+    <!-- CSS style to set alternate table 
+            row using color -->
+    <style>
+        table {
+            background-color: royalblue;
+            border: solid;
+            width: 100%;
+        }
+        h1{
+            text-align: center;
+        }
+        body{
+            background-image: url("C:\Users\2143716\OneDrive - Cognizant\Desktop\Notepad\wp3832079.jpg");
+            background-repeat: repeat-x;
+        }
+          
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+          
+        tr:nth-child(even) {
+            background-color: pink;
+        }
+        a{
+            color: seagreen;
+        }
+        .big{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+  
+<body>
+    <script>
+        function showTable(){
+            document.getElementById("table1").style.visibility="visible";
+        }
+        function hideTable(){
+            document.getElementById("table1").style.visibility="hidden";
+        }
+    </script>
+    <h1>Heading1</h1>
+    <table id="table1">
+        <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>age</th>
+        </tr>
+          
+        <tr>
+            <td>Ankita</td>
+            <td>India</td>
+            <td>24</td>
+        </tr>
+          
+        <tr>
+            <td>Nikita</td>
+            <td>England</td>
+            <td>30</td>
+        </tr>
+          
+        <tr>
+            <td>Anmol</td>
+            <td>Brazil</td>
+            <td>40</td>
+        </tr>
+          
+        <tr>
+            <td>Kartik</td>
+            <td>India</td>
+            <td>20</td>
+        </tr>
+          
+        <tr>
+            <td>golu</td>
+            <td>India</td>
+            <td>20</td>
+        </tr>
+    </table>
+    <button onclick="showTable()">Show</button>
+    <button onclick="hideTable()">Hide</button>
+    <p class="big">
+        Lorem ipsum is placeholder text commonly used in the <a href="">graphic</a>, print, and publishing <a href="">industries</a> for previewing layouts and visual mockups.
+    </p>
+</body>
+  
+</html>
