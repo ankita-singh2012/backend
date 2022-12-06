@@ -1,0 +1,23 @@
+@each $color in rgb(202, 34, 34),rgb(52, 165, 42),rgb(185, 33, 185), rgb(255, 222, 192){
+    .c_#{$color}{
+        background-color: $color;
+    }
+}
+@each $color,$textcolor,$bor in ( rgb(128, 128, 128),rgb(0, 0, 0),5px solid rgba(184, 20, 20, 0.795)),( rgb(42, 65, 165),yellow,5px solid yellow),(plum,darkviolet,5px solid darkviolet),( pink,green,5px solid green){
+    .c_#{$color}{
+        background-color: $color;
+        color:$textcolor;
+        border: $bor;
+    }
+}
+//@each in map
+@each $headings,$border in(
+    h1:1px solid rgb(68, 0, 255),
+    h2:2px dashed rgb(128, 36, 0),
+    h3:4px double black,
+    h4:4px dotted pink
+){
+#{$headings}{
+    border:$border;
+}
+}
