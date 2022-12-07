@@ -26,4 +26,4 @@ let nodes = arr.map(
 );
 ul.append(...nodes);
 
-document.getElementById('ul1').style.color='black';
+document.getElementById('ul1').style.color='blue';

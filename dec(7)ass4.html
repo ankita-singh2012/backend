@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Document</title>
+    <style>    
+    .geeks {
+        width: 100%;
+        height: 600px;
+        background-size: cover;
+    }
+    </style>
+    </head>
+    <body id="body" class="geeks">
+    <p id="print"></p>
+    <script>
+        let div =
+        document.querySelector(".geeks");
+        div.addEventListener(
+        "mousemove", function (e) {
+            x = e.offsetX;
+            y = e.offsetY;
+            div.style.backgroundColor
+                = `rgb(${x}, ${y}, ${x - y})`;
+        });
+    </script>
+    <script src="ass4.js"></script>
+    </body>
+    </html>
