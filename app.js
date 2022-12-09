@@ -1,32 +1,23 @@
-const emp= {
-    empId:'2143716',
-    fName:'Ankita',
-    lName:'Singh',
-    dept:{
-        deptName:'FSEjava',
-        deptId:'123',
-        mangerId:'123456',
+let btn = document.getElementById("btn");
+btn.addEventListener('click',loadData);
+function loadData(){
+    const xhr= new XMLHttpRequest();
+    xhr.open('Get','data.txt',true);
+    xhr.onprogress = function(){
+        xhr.onprogress = function(){
+            console.log('ready state',xhr.readyState);
 
-    },
-   project:{
-    pId:12367865,
-    title:"About project",
-    started:false,
-   },
-   salary:150000,
-   doj:new Date("2024-08-25"),
-   serviceYears:function(){
-    return(2022-this.doj.getFullyYear());
-   } 
-}
-for(let i in emp){
-    if((i==="project")||(i==="department")){
-        for(let j in emp[i]){
-            console.log(`${emp[i][j]}`);
+        }
+        xhr.onload = function(){
+            console.log('readyState',xhr.readyState);
+            document.getElementById('output').innerHTML=`<h1>${this.responseText}</h1>`;
 
         }
     }
-    else{
-        console.log(`${i} : ${emp[i]}`);
+    xhr.onerror = function(){
+        console.log('Request has some errors');
+
     }
+    xhr.send();
+    
 }
