@@ -3,18 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Templates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+<style>
+    .flexbox{
+        display: flex;
+        margin: 50px;
+    }
+    .temp1{
+        background-color: rgb(0, 255, 89);
+        flex-basis: 20%;
+    }
+    .temp2{
+        background-color: rgba(0, 0, 255, 0.847);
+        flex-basis: 60%;
+
+    }
+    .temp3{
+        background-color: rgb(0, 255, 60);
+        flex-basis: 20%;
+    }
+    .temp{
+        background-color: rgb(255, 98, 0);
+        flex-basis: 100%;
+    }
+</style>
 <body>
-    <template id="mytemplate">
-        <h2 style="color:brown;">Rendering date</h2>
-        <p id="display"></p>
-        <script>
-            let date= new Date();
-            document.getElementById("display").innerHTML=date;
-        </script>
-    </template>
+    <div class="flexbox">
+        <div class="temp1">
+            <template id="mytemplate1"></template>
+            <my-template1></my-template1>
+        </div>
+        <div class="temp2">
+            <h1>Ankita</h1>
+        </div>
+        <div class="temp3">
+            <template id="mytemplate2"></template>
+            <my-template2></my-template2> 
+        </div>
+        
+    </div>
+    <div class="flexbox">
+        <div class="temp">
+            <template id="mytemplate3"></template>
+        <my-template3 ></my-template3>
+        </div>
+    </div>
+    
+    
     
     <script src="temp.js"></script>
 </body>

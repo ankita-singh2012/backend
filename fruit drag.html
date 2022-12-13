@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        #div1{
+            border:1px solid rgb(72, 0, 255);
+            box-shadow: 20em;
+            height: 100px;
+            width: 200px;
+        }
+    </style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("list1", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("list1");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+    <ol >
+        <li id="list1"  draggable="true" ondragstart="drag(event)">
+            apple
+        </li>
+        <li id="list1"  draggable="true" ondragstart="drag(event)">mango</li>
+        <li id="list1"  draggable="true" ondragstart="drag(event)">orange</li>
+    </ol><br>
+drop fruits here
+<br>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>

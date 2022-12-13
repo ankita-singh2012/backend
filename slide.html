@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="slide.css">
+</head>
+<body>
+  <div id="slider" class="slider">
+    <div class="thumb"></div>
+  </div>
+  <script>
+    let thumb = slider.querySelector('.thumb');
+    thumb.onmousedown = function(event) {
+        thumb.style.position='absolute';
+        thumb.style.zIndex=1000;
+        thumb.style.yIndex=1000;
+        document.body.append(thumb);
+
+     //
+       
+     // shiftY not needed, the thumb moves only horizontally
+     function moveAt(pageX){
+        let val= pageX - thumb.offsetWidth / 2;
+        if(val>310){
+            thumb.style.left = 310+'px';
+
+        }
+        else{
+            thumb.style.left = val+'px';
+        }
+    }
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
+      function onMouseMove(event) {
+        moveAt(event.pageX);
+      }
+      function onMouseUp(){
+        document.removeEventListener('mousemove',onMouseMove);
+      }
+    };
+    </script> 
+   </body>
+</html> 
